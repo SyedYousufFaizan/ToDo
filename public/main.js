@@ -2,17 +2,7 @@ var inpValue = document.getElementById('inputt').value.trim()
 let btn = document.querySelector("#input-btn")
 
 var addlist = ()=>{
-    //var listt = document.createElement("li");
-    //var task = document.createTextNode(`${inpValue}`);
-    //listt.appendChild(task);
     console.log(inpValue)
-    //var ulList = document.querySelector("#myUl")
-    //ulList.appendChild(listt)
-    //ulList.innerHTML += `<li class="listBorder">${inpValue}</li>`
-    //var newTask = document.createElement("li");
-    //newTask.className = "listBorder";
-    //newTask.textContent = inpValue + " KILL!!";
-    //document.getElementById('inputt').value = "";
 }
 
 
@@ -50,10 +40,6 @@ btn.addEventListener("click", function () {
     
     if (inpValue !== "") {
         var ulList = document.querySelector("#myUl");
-            // var newTask = document.createElement("li");
-            // newTask.className = "listBorder";
-            // newTask.textContent = inpValue;
-            // ulList.appendChild(newTask);
             var nodeList = document.getElementsByTagName('LI');
             ulList.innerHTML += `<li class="listBorder">${inpValue} <button name="check-btn" id="check-btn" class="mr-2 hover:bg-white rounded-full "><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
             <path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75L11.25 15 15 9.75M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
@@ -67,7 +53,6 @@ btn.addEventListener("click", function () {
             span.appendChild(txt);
 
             
-            // let i =  nodeList[nodeList.length-1]
             nodeList[nodeList.length-1].appendChild(span)
             console.log(nodeList[nodeList.length-1])
             //adding close task function on the new elements
@@ -105,7 +90,6 @@ var checkBtn = document.getElementsByName("check-btn")
 var j;
 
 for(j=0;j<checkBtn.length; j++){
-   // console.log(checkBtn[j].parentElement)
     let listss = checkBtn[j] 
     console.log(listss.parentElement)
     listss.addEventListener("click", function(){
@@ -113,13 +97,4 @@ for(j=0;j<checkBtn.length; j++){
        areCompleted.classList.add('completed')
     })
 }
-    //99% done just need to tidy up the pos of the check mark for done task
-    //also have to add a function soo that the added/edited tasks dont get lost after refresing
-    
-
-
-// checkBtn.addEventListener("click", ()=>{
-//     checkedlists = checkBtn.parentElement;
-//     checkedlists.classList.add('completed')
-//     console.log(checkedlists)
-// })
+  
