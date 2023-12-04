@@ -1,0 +1,27 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+.listBorder{
+    @apply border-y-2 border-solid border-gray-800 m-0 py-2 w-full justify-center flex flex-row justify-between pl-3
+}
+
+.completed {
+    @apply line-through decoration-2 bg-blue-200 font-light
+}
+
+
+
+
+span{
+    @apply mr-5
+}
+
+li button{
+    @apply absolute right-10
+}
+
+li span{
+    @apply cursor-pointer
+}
